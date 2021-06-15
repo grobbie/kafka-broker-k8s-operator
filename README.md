@@ -1,4 +1,5 @@
-# Kafka Broker for k8s juju demo charm using opi toolkit for Juju configuration autowiring
+# Kafka Broker operator for k8s
+This is a [`juju charm`](https://juju.is) that uses the opi toolkit for Juju configuration autowiring.
 
 ## What is this?
 This is a kafka broker charm that uses the configuration autowiring functionality of the `OpI` Juju charm library. The library automatically wires changes to [juju relations](https://juju.is/docs/sdk/relations) into your charmed application's configuration files.
