@@ -1,0 +1,8 @@
+configure:
+  params:
+    key:
+      type: string
+    value:
+      type: string
+  required: [key, value]
+  additionalProperties: false

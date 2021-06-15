@@ -36,7 +36,13 @@ juju deploy zookeeper-k8s -n 3
 ```sh
 juju add-relation zookeeper-k8s kafka-broker
 ```
+## Actions
+Currently this charm exposes the following actions:
+- `configure` - this action allows the juju admin to change arbitrary configuration parameters on the kafka-broker cluster. Note that there seems to be a bug in juju at the moment that prevents this action from handling integers. Usage:
+```
+juju run-action kafka-broker/0 configure key=compression.type value=snappy
+```
+
 ## Roadmap
-- Currently this charm doesn't support `juju actions`. When it does, it'll be much more powerful.
 - Not all server.properties have been configured yet
 - Still to expose a client interface
