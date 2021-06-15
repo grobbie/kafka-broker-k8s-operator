@@ -12,14 +12,14 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 #}broker.id.generation.enable=true
-num.network.threads=3
-log.dirs=/var/kafka/kafka-logs
-num.partitions=1
-num.recovery.threads.per.data.dir=1
-num.io.threads=8
-offsets.topic.replication.factor=3
-transaction.state.log.replication.factor=3
-transaction.state.log.min.isr=2
+num.network.threads={{ config["num.network.threads"] }}
+log.dirs={{ config["log.dirs"] }}
+num.partitions={{ config["num.partitions"] }}
+num.recovery.threads.per.data.dir={{ config["num.recovery.threads.per.data.dir"] }}
+num.io.threads={{ config["num.io.threads"] }}
+offsets.topic.replication.factor={{ config["offsets.topic.replication.factor"] }}
+transaction.state.log.replication.factor={{ config["transaction.state.log.replication.factor"] }}
+transaction.state.log.min.isr={{ config["transaction.state.log.min.isr"] }}
 zookeeper.connect={{ config["ingress-addresses"] }}:{{ config["client-port"] }}
 auto.create.topics.enable={{ config["auto.create.topics.enable"] }}
 auto.leader.rebalance.enable={{ config["auto.leader.rebalance.enable"] }}

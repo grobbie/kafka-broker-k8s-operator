@@ -42,4 +42,43 @@
   property_value: snappy
   template_file: server.properties.jinja
   config_file_destination: "/opt/kafka/config/server.properties"
-
+- relation: kafka-broker-peer
+  property_name: num.network.threads
+  property_value: 3
+  template_file: server.properties.jinja
+  config_file_destination: "/opt/kafka/config/server.properties"
+- relation: kafka-broker-peer
+  property_name: log.dirs
+  property_value: /var/kafka/kafka-logs
+  template_file: server.properties.jinja
+  config_file_destination: "/opt/kafka/config/server.properties"
+- relation: kafka-broker-peer
+  property_name: num.partitions
+  property_value: 1
+  template_file: server.properties.jinja
+  config_file_destination: "/opt/kafka/config/server.properties"
+- relation: kafka-broker-peer
+  property_name: num.recovery.threads.per.data.dir
+  property_value: 1
+  template_file: server.properties.jinja
+  config_file_destination: "/opt/kafka/config/server.properties"
+- relation: kafka-broker-peer
+  property_name: num.io.threads
+  property_value: 8
+  template_file: server.properties.jinja
+  config_file_destination: "/opt/kafka/config/server.properties"
+- relation: kafka-broker-peer
+  property_name: offsets.topic.replication.factor
+  property_value: 3
+  template_file: server.properties.jinja
+  config_file_destination: "/opt/kafka/config/server.properties"
+- relation: kafka-broker-peer
+  property_name: transaction.state.log.replication.factor
+  property_value: 3
+  template_file: server.properties.jinja
+  config_file_destination: "/opt/kafka/config/server.properties"
+- relation: kafka-broker-peer
+  property_name: transaction.state.log.min.isr
+  property_value: 1
+  template_file: server.properties.jinja
+  config_file_destination: "/opt/kafka/config/server.properties"
